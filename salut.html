@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        header{
+            z-index: 1;
+            height: 100px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--principal-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .logo{
+            width: 60px;
+            height: 60px;
+        }
+        .logo-image{
+            max-width: 100%;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+            gap: 30px;
+            margin-right: 20px;
+        }
+        .lien-nav-bar{
+            text-decoration: none;
+            color: black;
+        }
+        :root{
+            --principal-color: rgb(228, 218, 73);
+        }
+        .fond-ecran{
+            position: relative;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            background-color: gainsboro;
+        }
+        .aller-en-bas{
+            position: absolute;
+            content: '\2228';
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: gray;
+            transition: .5s ease-in-out;
+        }
+        .aller-en-bas:hover{
+            width: 50px;
+            height: 50px;
+            background-color: var(--principal-color);
+            bottom: -25px;
+        }
+        .centrer{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .logo-centre{
+            width: 150px;
+            height: 150px;
+        }
+        .titre-home-page{
+            position: relative;
+            z-index: 2;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        .fond-floue{
+            position: relative;
+            z-index: 1;
+            width: 200px;
+            height: 30px;
+            margin-top: -30px;
+            filter: blur(10px);
+            background-color:rgba(0, 0, 0,.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-image" src="" alt="">
+        </div>
+        <ul>
+            <a class="lien-nav-bar" href=""><li class="li-nav-bar">Lien 1</li></a>
+            <a class="lien-nav-bar" href=""><li class="li-nav-bar">Lien 2</li></a>
+            <a class="lien-nav-bar" href=""><li class="li-nav-bar">Lien 3</li></a>
+            <a class="lien-nav-bar" href=""><li class="li-nav-bar">Lien 4</li></a>
+        </ul>
+    </header>
+    <section>
+        <div>
+            <img class="fond-ecran" src="" alt="">
+            <div class="aller-en-bas"></div>
+            <div class="centrer">
+                <img class="logo-centre" src="" alt="">
+                <p class="titre-home-page">GRAND TITRE</p>
+                <div class="fond-floue"></div>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>
